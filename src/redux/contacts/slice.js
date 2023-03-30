@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchContacts, addContact, deleteContact } from "./phonebookOperations";
+import { fetchContacts, addContact, deleteContact } from "./operations";
 
 const handlePending = state => {
     state.isLoading = true;
@@ -9,8 +9,8 @@ const handleRejected = (state, action) => {
     state.error = action.payload;
 };
 
-export const phonebookSlice = createSlice({
-    name: 'phonebook',
+export const contactsSlice = createSlice({
+    name: 'contacts',
     initialState: {
         contacts: {
             items: [],
@@ -54,6 +54,6 @@ export const phonebookSlice = createSlice({
     },
 });
 
-export const { filterContacts } = phonebookSlice.actions;
+export const { filterContacts } = contactsSlice.actions;
 
-export default phonebookSlice.reducer;
+export default contactsSlice.reducer;
