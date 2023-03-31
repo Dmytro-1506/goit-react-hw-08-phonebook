@@ -5,8 +5,7 @@ import { findedContacts } from 'redux/contacts/selectors';
 
 export const ContactList = () => {
     const dispatch = useDispatch()
-    const contacts = useSelector(findedContacts)
-    console.log('contacts list');
+    const contacts = useSelector(findedContacts);
 
     return <div className='contacts'>
         <ul className="contact-list">

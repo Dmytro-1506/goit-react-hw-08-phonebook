@@ -4,11 +4,11 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoading } from 'redux/contacts/selectors';
 import { fetchContacts } from '../redux/contacts/operations';
+import { Filter } from 'components/Filter/Filter';
 
 export default function Contacts() {
     const dispatch = useDispatch();
     const isLoading = useSelector(selectIsLoading);
-    console.log('contacts page');
 
     useEffect(() => {
         dispatch(fetchContacts());
@@ -16,9 +16,11 @@ export default function Contacts() {
 
     return (
         <>
-                <title>Your contacts</title>
+        <h2 className='title'>Phonebook</h2>
             <ContactForm />
             <div>{isLoading && 'Request in progress...'}</div>
+            <h2 className='title'>My contacts</h2>
+            <Filter />
             <ContactList />
         </>
     );

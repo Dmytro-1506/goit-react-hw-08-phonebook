@@ -32,3 +32,9 @@ li {
 .deleteBtn:hover {
   cursor: pointer;
 }
+
+.title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
