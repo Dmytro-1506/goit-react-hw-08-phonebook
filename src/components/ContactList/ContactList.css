@@ -5,6 +5,8 @@
 
 .contact-list {
   padding-left: 0;
+  margin: 30px auto;
+  width: 800px;
 }
 
 p {

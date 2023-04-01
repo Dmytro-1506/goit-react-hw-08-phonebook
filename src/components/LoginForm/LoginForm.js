@@ -18,7 +18,8 @@ export const LoginForm = () => {
     };
 
     return (
-        <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
+        <div className='container'>
+            <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
             <label className={css.label}>
                 Email
                 <input type="email" name="email" />
@@ -29,5 +30,6 @@ export const LoginForm = () => {
             </label>
             <button type="submit">Log In</button>
         </form>
+        </div>
     );
 };
